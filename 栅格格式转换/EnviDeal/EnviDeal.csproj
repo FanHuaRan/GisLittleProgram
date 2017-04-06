@@ -55,6 +55,21 @@
     <Compile Include="Pixel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Refactor\Converts\BilToBipConvertClass.cs" />
+    <Compile Include="Refactor\Converts\BilToBsqConvertClass.cs" />
+    <Compile Include="Refactor\Converts\BipToBilConvertClass.cs" />
+    <Compile Include="Refactor\Converts\BipToBsqConvertClass.cs" />
+    <Compile Include="Refactor\Converts\BsqToBilConvertClass.cs" />
+    <Compile Include="Refactor\Converts\BsqToBipConvertClass.cs" />
+    <Compile Include="Refactor\EnviBasicUtil.cs" />
+    <Compile Include="Refactor\EnviDataBeanClass.cs" />
+    <Compile Include="Refactor\EnviFactory.cs" />
+    <Compile Include="Refactor\IDataConvertStrategy.cs" />
+    <Compile Include="Refactor\IEnviDataBean.cs" />
+    <Compile Include="Refactor\IReadPixelStrategy.cs" />
+    <Compile Include="Refactor\Readpixels\ReadPixelBilClass.cs" />
+    <Compile Include="Refactor\Readpixels\ReadPixelBipClass.cs" />
+    <Compile Include="Refactor\Readpixels\ReadPixelBsqClass.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,6 +96,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

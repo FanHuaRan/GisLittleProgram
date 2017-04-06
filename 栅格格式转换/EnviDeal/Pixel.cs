@@ -10,7 +10,7 @@ namespace EnviDeal
     /// 像素
     /// 2017/04/06 fhr
     /// </summary>
-  public   class Pixel
+  public class Pixel
     {
       //颜色分量 RGB模式
       public  int[]ColorNum;

@@ -25,3 +25,12 @@ E:\Programing\c#\GIS_Data-master\栅格格式转换\EnviDeal\EnviDeal\obj\Debug\
 E:\Programing\c#\GIS_Data-master\栅格格式转换\EnviDeal\EnviDeal\obj\Debug\EnviDeal.csproj.GenerateResource.Cache
 E:\Programing\c#\GIS_Data-master\栅格格式转换\EnviDeal\EnviDeal\bin\Debug\EnviDeal.exe
 E:\Programing\c#\GIS_Data-master\栅格格式转换\EnviDeal\EnviDeal\bin\Debug\EnviDeal.pdb
+E:\Programing\c#\GisLittleProgram\栅格格式转换\EnviDeal\bin\Debug\EnviDeal.exe.config
+E:\Programing\c#\GisLittleProgram\栅格格式转换\EnviDeal\obj\Debug\EnviDeal.exe
+E:\Programing\c#\GisLittleProgram\栅格格式转换\EnviDeal\obj\Debug\EnviDeal.pdb
+E:\Programing\c#\GisLittleProgram\栅格格式转换\EnviDeal\bin\Debug\EnviDeal.exe
+E:\Programing\c#\GisLittleProgram\栅格格式转换\EnviDeal\bin\Debug\EnviDeal.pdb
+E:\Programing\c#\GisLittleProgram\栅格格式转换\EnviDeal\obj\Debug\EnviDeal.csprojResolveAssemblyReference.cache
+E:\Programing\c#\GisLittleProgram\栅格格式转换\EnviDeal\obj\Debug\EnviDeal.Form1.resources
+E:\Programing\c#\GisLittleProgram\栅格格式转换\EnviDeal\obj\Debug\EnviDeal.Properties.Resources.resources
+E:\Programing\c#\GisLittleProgram\栅格格式转换\EnviDeal\obj\Debug\EnviDeal.csproj.GenerateResource.Cache
