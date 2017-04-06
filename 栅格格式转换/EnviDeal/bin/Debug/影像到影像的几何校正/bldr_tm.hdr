@@ -1,0 +1,20 @@
+ENVI
+description = {
+  Applied Mask Result [Thu Mar 26 09:23:21 2009]}
+samples = 414
+lines   = 498
+bands   = 6
+header offset = 0
+file type = ENVI Standard
+data type = 1
+interleave = bsq
+sensor type = Unknown
+byte order = 0
+x start = 71
+y start = 150
+default bands = {4,3,2}
+wavelength units = Unknown
+band names = {
+ Band1, Band2, Band3, Band4, Band5, Band6}
+wavelength = {
+ 0.485000, 0.560000, 0.660000, 0.830000, 1.650000, 2.215000}

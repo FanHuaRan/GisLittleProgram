@@ -1,0 +1,51 @@
+ENVI
+description = {
+  Registration Result. Method: Triangulation w/ cubic convolution [Thu May 5
+  00:24:21 1994] }
+samples = 1071
+lines   = 1390
+bands   = 1
+header offset = 0
+file type = Other
+data type = 1
+interleave = bsq
+byte order = 0
+map info = {UTM, 1.00, 1.00, 468034.00, 4441479.00, 10.00, 10.00, 13, Meters}
+band names = {
+Georeferenced SPOT)}
+;
+; ARC/INFO Image Information
+;
+NCOLS       1071
+NROWS       1390
+NBANDS      1
+NBITS       8
+LAYOUT      
+BYTEORDER   I
+SKIPBYTES   0
+MAPUNITS    METERS
+ULXMAP      468034.00
+ULYMAP      4441479.00
+XDIM        10.00
+YDIM        10.00
+UL_UTMEAST  468034.000
+UL_UTMNORTH 4441479.000
+UTM_ZONE    13
+;
+; ARC/INFO Image Information
+;
+NCOLS       1071
+NROWS       1390
+NBANDS      1
+NBITS       8
+LAYOUT      
+BYTEORDER   I
+SKIPBYTES   0
+MAPUNITS    METERS
+ULXMAP      468034.00
+ULYMAP      4441479.00
+XDIM        10.00
+YDIM        10.00
+UL_UTMEAST  468034.000
+UL_UTMNORTH 4441479.000
+UTM_ZONE    13

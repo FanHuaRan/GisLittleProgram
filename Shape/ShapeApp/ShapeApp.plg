@@ -1,0 +1,41 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ShapeApp - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP63A2.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/ShapeApp.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\程序\工程文件\GIS\Shape\ShapeApp\ShapeAppView.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP63A2.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP63A3.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/ShapeApp.pdb" /debug /machine:I386 /out:"Debug/ShapeApp.exe" /pdbtype:sept 
+".\Debug\MainFrm.obj"
+".\Debug\ommon.obj"
+".\Debug\ShapeApp.obj"
+".\Debug\ShapeAppDoc.obj"
+".\Debug\ShapeAppView.obj"
+".\Debug\StdAfx.obj"
+".\Debug\ShapeApp.res"
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP63A3.tmp"
+<h3>Output Window</h3>
+Compiling...
+ShapeAppView.cpp
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/ShapeApp.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\MainFrm.sbr" ".\Debug\ommon.sbr" ".\Debug\ShapeApp.sbr" ".\Debug\ShapeAppDoc.sbr" ".\Debug\ShapeAppView.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+ShapeApp.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
