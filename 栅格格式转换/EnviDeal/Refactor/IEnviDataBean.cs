@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace EnviDeal.Refactor
 {
+    /// <summary>
+    /// 主接口
+    /// </summary>
     public interface IEnviDataBean
     {
         IDataConvertStrategy DataConvertStrategy{ set;}
