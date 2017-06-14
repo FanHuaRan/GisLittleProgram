@@ -83,28 +83,21 @@ namespace EnviDeal.Refactor
             {
                 throw new Exception("文件格式不符合要求");
             }
-            try
+            using (var reader = new StreamReader(origiPath))
+            using (var fileStream = new FileStream(outPath, FileMode.OpenOrCreate, FileAccess.Write))
             {
-                using (var reader = new StreamReader(origiPath))
-                using (var fileStream = new FileStream(outPath, FileMode.OpenOrCreate, FileAccess.Write))
+                var writer = new StreamWriter((Stream)fileStream);
+                while (!reader.EndOfStream)
                 {
-                    var writer = new StreamWriter((Stream)fileStream);
-                    while (!reader.EndOfStream)
+                    string rowStr = reader.ReadLine();
+                    if (rowStr.Contains("interleave"))
                     {
-                        string rowStr = reader.ReadLine();
-                        if (rowStr.Contains("interleave"))
-                        {
-                            var strArrys = rowStr.Split('=');
-                            rowStr = rowStr.Replace(strArrys[1], " " + newType);
-                        }
-                        writer.WriteLine(rowStr);
+                        var strArrys = rowStr.Split('=');
+                        rowStr = rowStr.Replace(strArrys[1], " " + newType);
                     }
+                    writer.WriteLine(rowStr);
                 }
-            }
-            catch (Exception er)
-            {
-                Debug.Print(er.Message);
-                throw er;
+                writer.Flush();
             }
         }
     }

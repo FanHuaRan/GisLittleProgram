@@ -18,25 +18,27 @@ namespace ShapeFileDemo.Util
         /// <param name="stream"></param>
         /// <param name="shapes"></param>
         /// <returns></returns>
-        public static FileHead readShapeFile(Stream stream, out  List<ShapeBaseClass> shapes)
+        public static FileHead readShapeFile(String fileName, out List<ShapeBaseClass> shapes)
         {
-            BinaryReader br = new BinaryReader(stream);
-            FileHead head = readFileHead(br);
-            shapes = new List<ShapeBaseClass>();
-            switch (head.ShapeType)
+            using (var stream = new FileStream(fileName, FileMode.Open))
+            using (var br = new BinaryReader(stream))
             {
-                case 1:
-                    readPoints(shapes, br);
-                    break;
-                case 3:
-                    readPolylines(shapes, br);
-                    break;
-                case 5:
-                    readPolygons(shapes, br);
-                    break;
+                var head = readFileHead(br);
+                shapes = new List<ShapeBaseClass>();
+                switch (head.ShapeType)
+                {
+                    case 1:
+                        readPoints(shapes, br);
+                        break;
+                    case 3:
+                        readPolylines(shapes, br);
+                        break;
+                    case 5:
+                        readPolygons(shapes, br);
+                        break;
+                }
+                return head;
             }
-            stream.Close();
-            return head;
         }
         /// <summary>
         /// 读取多边形
@@ -47,7 +49,7 @@ namespace ShapeFileDemo.Util
         {
             while (br.PeekChar() != -1)
             {
-                SPolygon polygon = new SPolygon();
+                var polygon = new SPolygon();
                 polygon.Parts = new List<int>();
                 polygon.Points = new List<SPoint>();
                 polygon.RecordNum = br.ReadInt32();
@@ -68,7 +70,7 @@ namespace ShapeFileDemo.Util
                 }
                 for (int j = 0; j < polygon.NumPoints; j++)
                 {
-                    SPoint pointtemp = new SPoint();
+                    var pointtemp = new SPoint();
                     pointtemp.X = br.ReadDouble();
                     pointtemp.Y = br.ReadDouble();
                     polygon.Points.Add(pointtemp);
@@ -85,7 +87,7 @@ namespace ShapeFileDemo.Util
         {
             while (br.PeekChar() != -1)
             {
-                SPolyline polyline = new SPolyline();
+                var polyline = new SPolyline();
                 polyline.Box = new double[4];
                 polyline.Parts = new List<int>();
                 polyline.Points = new List<SPoint>();
@@ -107,7 +109,7 @@ namespace ShapeFileDemo.Util
                 }
                 for (int j = 0; j < polyline.NumPoints; j++)
                 {
-                    SPoint pointtemp = new SPoint();
+                    var pointtemp = new SPoint();
                     pointtemp.X = br.ReadDouble();
                     pointtemp.Y = br.ReadDouble();
                     polyline.Points.Add(pointtemp);
@@ -124,7 +126,7 @@ namespace ShapeFileDemo.Util
         {
             while (br.PeekChar() != -1)
             {
-                SPoint point = new SPoint();
+                var point = new SPoint();
                 point.RecordNum = br.ReadInt32();
                 point.DataLength = br.ReadInt32();
                 //读取第i个记录
@@ -137,7 +139,7 @@ namespace ShapeFileDemo.Util
 
         private static FileHead readFileHead(BinaryReader br)
         {
-            FileHead head = new FileHead();
+            var head = new FileHead();
             //读取文件过程
             head.FileCode = br.ReadInt32();
             for (int i = 0; i < 5; i++)

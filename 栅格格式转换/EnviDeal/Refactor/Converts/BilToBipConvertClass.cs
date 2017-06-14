@@ -28,6 +28,7 @@ namespace EnviDeal.Refactor
                     }
                 }
             }
+            outputF.Flush();
         }
     }
 }

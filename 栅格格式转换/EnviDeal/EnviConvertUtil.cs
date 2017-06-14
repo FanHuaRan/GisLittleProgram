@@ -53,7 +53,7 @@ namespace MrFan.Tool.EnviDeal
                         iLinesCount = Convert.ToInt32(lines);
                     }
                     //获取波段个数
-                    else if (content.Contains("bands"))
+                    else if (content.Contains("bands") &&! content.StartsWith("default bands"))
                     {
                         var bands = content.Substring(content.IndexOf("=") + 1, content.Length - content.IndexOf("=") - 1).Trim();
                         iBandsCount = Convert.ToInt32(bands);
@@ -88,28 +88,21 @@ namespace MrFan.Tool.EnviDeal
             {
                 throw new Exception("文件格式不符合要求");
             }
-            try
+            using (var reader = new StreamReader(origiPath))
+            using (var fileStream = new FileStream(outPath, FileMode.OpenOrCreate, FileAccess.Write))
             {
-                using (var reader = new StreamReader(origiPath))
-                using (var fileStream = new FileStream(outPath, FileMode.OpenOrCreate, FileAccess.Write))
+                var writer = new StreamWriter((Stream)fileStream);
+                while (!reader.EndOfStream)
                 {
-                    var writer = new StreamWriter((Stream)fileStream);
-                    while (!reader.EndOfStream)
+                    string rowStr = reader.ReadLine();
+                    if (rowStr.Contains("interleave"))
                     {
-                        string rowStr = reader.ReadLine();
-                        if (rowStr.Contains("interleave"))
-                        {
-                            var strArrys = rowStr.Split('=');
-                           rowStr = rowStr.Replace(strArrys[1], " " + newType);
-                        }
-                        writer.WriteLine(rowStr);
+                        var strArrys = rowStr.Split('=');
+                        rowStr = rowStr.Replace(strArrys[1], " " + newType);
                     }
+                    writer.WriteLine(rowStr);
                 }
-            }
-            catch (Exception er)
-            {
-                Debug.Print(er.Message);
-                throw er;
+                writer.Flush();
             }
         }
          /// <summary>
@@ -152,6 +145,7 @@ namespace MrFan.Tool.EnviDeal
                             }
                         }
                     }
+                    outputF.Flush();
                     return blnSuccess;
             }
         }
@@ -195,6 +189,7 @@ namespace MrFan.Tool.EnviDeal
                             }
                         }
                     }
+                outputF.Flush();
                 return blnSuccess;
             }
         }
@@ -238,6 +233,7 @@ namespace MrFan.Tool.EnviDeal
                         }
                     }
                 }
+                outputF.Flush();
                 return blnSuccess;
             }
         }
@@ -281,6 +277,7 @@ namespace MrFan.Tool.EnviDeal
                         }
                     }
                 }
+                outputF.Flush();
                 return blnSuccess;
             }
         }
@@ -324,6 +321,7 @@ namespace MrFan.Tool.EnviDeal
                         }
                     }
                 }
+                outputF.Flush();
                 return blnSuccess;
             }
         }
@@ -367,6 +365,7 @@ namespace MrFan.Tool.EnviDeal
                         }
                     }
                 }
+                outputF.Flush();
                 return blnSuccess;
             }
         }

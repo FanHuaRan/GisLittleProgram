@@ -10,7 +10,7 @@ namespace ShapeFileDeal.ShapeClass
     /// 面
     /// 2017/04/06 fhr
     /// </summary>
-    class SPolygon:SPolyline
+    public class SPolygon:SPolyline
     {
     }
 }

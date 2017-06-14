@@ -12,7 +12,7 @@ namespace ShapeFileDeal.ShapeClass
     /// 线
     /// 2017/04/06 fhr
     /// </summary>
-    class SPolyline : ShapeBaseClass
+   public class SPolyline : ShapeBaseClass
     {
         public double[] Box = new double[4];
         public int NumParts;

@@ -127,12 +127,12 @@ namespace EnviDeal
 
         private void TransformBtt_Click(object sender, EventArgs e)
         {
-            foreach(var v in this.groupBox4.Controls)
+            foreach(RadioButton radioButton in this.groupBox4.Controls)
             {
-                RadioButton rb = (RadioButton)v;
-                if(rb.Checked==true)
+                if(radioButton.Checked==true)
                 {
-                    this.transformType = rb.Text;
+                    this.transformType = radioButton.Text;
+                    break;
                 }
             }
             if(transformType==orignType)

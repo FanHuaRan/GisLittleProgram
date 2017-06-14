@@ -11,7 +11,7 @@ namespace ShapeFileDeal.ShapeClass
     /// 点
     /// 2017/04/06 fhr
     /// </summary>
-    class SPoint : ShapeBaseClass
+    public class SPoint : ShapeBaseClass
     {
         public double X;
         public double Y;

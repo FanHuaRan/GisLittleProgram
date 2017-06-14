@@ -37,3 +37,9 @@ E:\Programing\c#\GIS_Data-master\Shape\C#\ShapeFileDemo\obj\Debug\ShapeFileDemo.
 E:\Programing\c#\GisLittleProgram\Shape\C#\ShapeFileDemo\bin\Debug\ShapeFileDemo.exe.config
 E:\Programing\c#\GisLittleProgram\Shape\C#\ShapeFileDemo\obj\Debug\ShapeFileDemo.exe
 E:\Programing\c#\GisLittleProgram\Shape\C#\ShapeFileDemo\obj\Debug\ShapeFileDemo.pdb
+E:\Programing\c#\GisLittleProgram\Shape\C#\ShapeFileDemo\bin\Debug\ShapeFileDemo.exe
+E:\Programing\c#\GisLittleProgram\Shape\C#\ShapeFileDemo\bin\Debug\ShapeFileDemo.pdb
+E:\Programing\c#\GisLittleProgram\Shape\C#\ShapeFileDemo\obj\Debug\ShapeFileDemo.csprojResolveAssemblyReference.cache
+E:\Programing\c#\GisLittleProgram\Shape\C#\ShapeFileDemo\obj\Debug\ShapeFileDemo.Form1.resources
+E:\Programing\c#\GisLittleProgram\Shape\C#\ShapeFileDemo\obj\Debug\ShapeFileDemo.Properties.Resources.resources
+E:\Programing\c#\GisLittleProgram\Shape\C#\ShapeFileDemo\obj\Debug\ShapeFileDemo.csproj.GenerateResource.Cache
