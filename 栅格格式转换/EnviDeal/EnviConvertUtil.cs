@@ -522,18 +522,5 @@ namespace MrFan.Tool.EnviDeal
             }
             return bts;
         }
-        /// <summary>
-        /// 关闭相关文件
-        /// </summary>
-        /// <param name="inputF"></param>
-        /// <param name="outputF"></param>
-        private static void closeFiles(FileStream inputF, FileStream outputF)
-        {
-            outputF.Flush();//保存缓存文件
-            outputF.Close();//关闭撤销变量文件
-            outputF.Dispose();
-            inputF.Close();
-            inputF.Dispose();
-        }
     }
 }
